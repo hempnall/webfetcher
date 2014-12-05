@@ -56,7 +56,7 @@ def download_file(input_file_name,output_directory):
 				with open(index_file_output_file_name, "a") as myfile:
 					line_to_write = new_file_name + ": " + url.strip()
 					print "INFO: " + line_to_write
-					myfile.write( line_to_write )
+					myfile.write( line_to_write  + "\r\n")
 
 			except Exception as inst:
 				print "ERROR: unable to fetch url [" + url.strip() + "]:" + str(inst)
